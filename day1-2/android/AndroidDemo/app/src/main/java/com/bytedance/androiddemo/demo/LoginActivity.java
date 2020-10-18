@@ -30,7 +30,7 @@ public class LoginActivity extends AppCompatActivity {
             public void onClick(View view) {
                 // 4. 获取用户的输入
                 String roomId = mEtRoomID.getText().toString();
-                String userName = mEtRoomID.getText().toString();
+                String userName = mEtUserName.getText().toString();
                 // 5. 创建Intent对象
                 Intent intent = new Intent(LoginActivity.this, ChatActivity.class);
                 intent.putExtra("rid", roomId);
