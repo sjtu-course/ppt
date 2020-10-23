@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+div {
+  width: 100px;
+  height: 100px;
+  background:cadetblue;
+  transition-property: width, background, border-radius;
+  transition-duration: 0.3s;
+  transition-timing-function:ease-in-out;
+  transition-delay: 0.1s;
+}
+
+div:hover {
+  width: 200px;
+  border-radius: 30px;
+  background: blueviolet;
+}
+
+</style>
+</head>
+<body>
+
+<h1>The transition Property</h1>
+
+<p>Hover over the div element below, to see the transition effect:</p>
+<div></div>
+
+<p><b>Note:</b> This example does not work in Internet Explorer 9 and earlier versions.</p>
+
+</body>
+</html>

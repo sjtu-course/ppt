@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var x = 0,
+            y = 0,
+            z = 0;
+        // x = 5;       
+
+        /*
+        y = 6;
+        z = x + y;         
+        */
+
+        <!-- z += 1; //-->
+
+        console.log(z);
+
+
+        typeof "John" // Returns "string"
+        typeof 3.14   // Returns "number"
+        typeof true   // Returns "boolean"
+        typeof false  // Returns "boolean"
+        typeof a      // Returns "undefined" (if x has no value)
+
+        typeof {name:'John', age:34} // Returns "object"
+        typeof [1,2,3,4]             // Returns "object" 
+        typeof null                  // Returns "object"
+        typeof function myFunc(){}   // Returns "function"
+
+        // primitive type compare
+        var var1 = 10;
+        var var2 = 10; 
+        var1 === var2;  // true
+
+        // non-primitive type compare
+        var obj1 = {name:'John'};
+        var obj2 = {name:'John'};
+        obj1 === obj2;  // false
+
+        2 ** 3      // 8
+        3 / 2       // 1.5
+        1 == '1'    // true
+        1 === '1'   // (type & value) false
+        !false      // true
+        ~-1        // (NOT) 0
+        5 ^ 1       // (XOR) 4
+        1 << 2      // (带符号左移) 4
+        -1 << 2     // -4
+        -8 >> 1     // (带符号右移) -4
+        -8 >>> 1    // (无符号右移) 2147483644
+
+
+        // function definition
+        function funcName(parameter1, parameter2, parameter3) {
+            // code to be executed
+            return parameter1 + parameter2 + parameter3
+        }
+
+        // function invocation
+        funcName(1, 2, 3);   // return 6
+        funcName(1, '2', 3); // return '123'
+
+
+        if (hour < 10) {
+            greeting = "Good morning";
+        } else if (hour < 20) {
+            greeting = "Good day";
+        } else {
+            greeting = "Good evening";
+        }
+
+        switch (new Date().getDay()) {
+        case 6:
+            text = "Today is Saturday";
+            break;
+        case 0:
+            text = "Today is Sunday";
+            break;
+        default:
+            text = "Looking forward to the Weekend";
+        }
+
+
+        for (i = 0; i < 5; i++) {
+            text += "The number is " + i + "<br>";
+        }
+
+        while (i < 10) {
+            text += "The number is " + i;
+            i++;
+        }
+
+
+
+    </script>
+</body>
+
+</html>

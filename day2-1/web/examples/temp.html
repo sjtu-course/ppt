@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo</title>
+    <script>
+        console.log('point 1:', document.getElementById('hello'))
+    </script>
+    <style>
+        #hello{
+            background-color: red;
+            width: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 style="color: red;">Text Color</h1>
+
+    <h1 style="font-style: italic; 
+    border: 1px dashed blue;">Font Style</h1>
+
+    <h1 style="font-weight: bold; 
+    background: yellow;">Font Style</h1>
+
+    <script>
+        console.log('point 2:', document.getElementById('hello'))
+    </script>
+    <div id="hello" draggable="true">hello</div>
+    <script>
+        console.log('point 3:', document.getElementById('hello'))
+        let hel = document.getElementById('hello')
+        hel.ondrag = function(ele){
+            console.log(ele);
+        }
+    </script>
+</body>
+
+</html>

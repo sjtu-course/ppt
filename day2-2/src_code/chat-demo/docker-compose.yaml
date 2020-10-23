@@ -1,0 +1,20 @@
+version: '3'
+services:
+  backend:
+    build: ./backend
+    container_name: chat-demo-backend
+    ports:
+    - "3001:3001"
+    healthcheck:
+      test: curl -fs http://localhost:3001/health-check || exit 1
+      interval: 1m
+      timeout: 5s
+      retries: 3
+
+  frontend:
+    build: ./frontend
+    container_name: chat-demo-frontend
+    depends_on:
+      - backend
+    ports:
+      - "3000:3000"

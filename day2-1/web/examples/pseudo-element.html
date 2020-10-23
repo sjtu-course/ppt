@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo-elements</title>
+    <style>
+        #p1::first-line {
+            color: #ff0000;
+            font-variant: small-caps;
+        }
+        #p2::first-letter {
+            color: #ff0000;
+            font-size: xx-large;
+        }
+        #p3::before{
+            content: "[[";
+            color: blueviolet;
+        }
+        #p3::after{
+            content: "]]";
+            color: blueviolet;
+        }
+        ::selection{
+            color: red;
+            background: yellow;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <h3>first-line</h3>
+    <p id="p1">You can use the ::first-line pseudo-element to add a special effect to the first line of a text. Some more text. And even more, and more, and more, and more, and more, and more, and more, and more, and more, and more, and more, and more.</p>
+    <hr>
+    <h3>first-letter</h3>
+    <p id="p2">You can use the ::first-line pseudo-element to add a special effect to the first line of a text. Some more text. And even more, and more, and more, and more, and more, and more, and more, and more, and more, and more, and more, and more.</p>
+    <hr>
+    <h3>before & after</h4>
+    <p id="p3">hello world</p>
+</body>
+
+</html>

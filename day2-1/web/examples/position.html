@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Positioning</title>
+    <style>
+        div{
+            border: 1px solid black;
+            padding: 50px;
+            position: relative;
+        }
+        .static{
+            color: lightpink;
+        }
+        .relative{
+            color: lightseagreen;
+        }
+        .absolute{
+            color: mediumorchid;
+        }
+        .fixed{
+            color: goldenrod;
+            position: fixed;
+            right: 70px;
+            top: 70px;
+        }
+        .relative.modified{
+            position: relative;
+            top: -20px;;
+        }
+        .absolute.modified{
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+    </style>
+</head>
+<body>
+    <h3>Original</h3>
+    <div>Watch carefully these words position <span class="static">static</span> <span class="relative">relative</span> <span class="absolute">absolute</span>.</div>
+    <hr>
+    <h3>Modified</h3>
+    <div>Watch carefully these words position <span class="static">static</span> <span class="relative modified">relative</span> <span class="absolute modified">absolute</span>.</div>
+    <h3></h3>
+    <div style="height:2000px"></div>
+    <span class="fixed">fixed</span>
+</body>
+</html>

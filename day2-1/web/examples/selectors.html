@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selector</title>
+    <style>
+        div a {
+            color: green;
+        }
+
+        div>a {
+            color: lawngreen;
+        }
+
+        div+a {
+            color: hotpink;
+        }
+
+        div ~ p {
+            color: orange;
+        }
+
+        .selected-item {
+            background-color: lightsalmon;
+            color: mediumseagreen;
+        }
+
+        #item4 {
+            background-color: mediumslateblue;
+            color: mediumturquoise;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <span>
+            <a href="">Descendant selector</a>
+        </span>
+    </div>
+    <div>
+        <div><a href="">Child selector</a></div>
+    </div>
+    <div>
+        <div></div>
+        <a href="">Adjacent sibling</a>
+    </div>
+    <hr>
+    <div>
+        <ul>
+            <li>item 1</li>
+            <li class="selected-item">item 2</li>
+            <li>item 3</li>
+            <li id="item4">item 4</li>
+        </ul>
+    </div>
+</body>
+
+</html>

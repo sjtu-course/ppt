@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Float</title>
+    <style>
+        #container {
+            width: 400px;
+            height: 400px;
+            border: 1px solid darkturquoise;
+        }
+
+        .brick400 {
+            width: 300px;
+            height: 60px;
+            border: 1px solid black;
+        }
+
+        .brick20 {
+            height: 20px;
+            width: 20px;
+            border: 1px solid black;
+        }
+
+        .brick30 {
+            height: 60px;
+            width: 30px;
+            border: 1px solid black;
+        }
+
+        .brick60 {
+            height: 60px;
+            width: 60px;
+            border: 1px solid black;
+        }
+
+        .left {
+            float: left;
+            background-color: coral;
+        }
+
+        .right {
+            float: right;
+            background-color: darkturquoise;
+        }
+
+        .clear-left {
+            clear: left;
+            background-color: lightpink;
+        }
+
+        div {
+            text-align: center;
+            vertical-align: middle;
+        }
+
+        div div::before {
+            content: "";
+            display: inline-block;
+            height: 100%;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+
+<body>
+    <button onclick="recycleBrick()">Prev</button>
+    <button onclick="putBrick()">Next</button>
+    <div id="container">
+    </div>
+    <br />
+    <div class="brick20" style="display:inline-block; background: coral;"></div> float:left <br>
+    <div class="brick20" style="display:inline-block; background: darkturquoise;"></div> float:right <br>
+    <div class="brick20" style="display:inline-block; background: lightpink;"></div> clear:left, display:block <br>
+    <script>
+        let container = document.getElementById("container");
+        let bricks = [
+            ['div', 'brick60 left', '1'],
+            ['div', 'brick30 left', '2'],
+            ['div', 'brick30 right', '3'],
+            ['div', 'brick60 right', '4'],
+            ['div', 'brick30 left', '5'],
+            ['div', 'brick400 left', '6'],
+            ['div', 'brick30 right', '7'],
+            ['div', 'brick60 clear-left', '8'],
+            ['div', 'brick60 left', '9'],
+            ['div', 'brick60 right', '10'],
+            ['span', '', 'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui .']
+        ]
+
+        function putBrick() {
+            let brick = bricks.shift();
+            let div = document.createElement(brick[0]);
+            div.className = brick[1];
+            div.innerText = brick[2];
+            div.name = brick[0]
+            container.appendChild(div);
+        }
+        function recycleBrick(){
+            let lastChild = container.lastChild;
+            if(lastChild){
+                let brick = [];
+                brick[0] = lastChild.name;
+                brick[1] = lastChild.className;
+                brick[2] = lastChild.innerText;
+                bricks.unshift(brick);
+                container.removeChild(lastChild);
+            }
+        }
+    </script>
+</body>
+
+</html>

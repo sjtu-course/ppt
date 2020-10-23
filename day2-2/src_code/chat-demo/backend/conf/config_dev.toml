@@ -1,0 +1,10 @@
+[address]
+    host = "localhost"
+    port = 3001
+
+[log]
+    access = "target/log/access.log"
+    app = "target/log/dev.log"
+
+[frontend]
+    group_avatar_url = "http://q.qlogo.cn/headimg_dl?dst_uin=1000000&spec=100"
