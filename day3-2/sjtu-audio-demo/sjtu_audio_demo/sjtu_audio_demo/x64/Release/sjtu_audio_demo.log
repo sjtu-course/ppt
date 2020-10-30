@@ -1,0 +1,10 @@
+﻿  sju_audio_demo.cpp
+c:\users\admin\desktop\sjtu-audio-demo\sjtu_audio_demo\sju_audio_demo.cpp(58): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+  wav_head_write.cpp
+LINK : warning LNK4098: 默认库“LIBCMT”与其他库的使用冲突；请使用 /NODEFAULTLIB:library
+  正在生成代码
+  3 of 21 functions (14.3%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    0 functions had inline decision re-evaluated but remain unchanged
+  已完成代码的生成
+  sjtu_audio_demo.vcxproj -> C:\Users\admin\Desktop\sjtu-audio-demo\sjtu_audio_demo\x64\Release\sjtu_audio_demo.exe
